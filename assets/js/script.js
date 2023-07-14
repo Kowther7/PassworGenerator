@@ -17,3 +17,12 @@ var confirmUpperLetter;
 var confirmSymbol;
 var confirmNumber;
 
+// Prompt to confirm how many characters the user would like in their password
+function generatePassword() {
+  var lengthOfPassword = prompt("How many characters would you like your password to contain?");
+  // Loop if answer is outside the range 
+  while((lengthOfPassword <=7)  || (lengthOfPassword >= 129 )|| isNaN(lengthOfPassword)) {
+      alert("Password length must be between 8-128 characters, reenter!");
+      var lengthOfPassword = (prompt("How many characters would you like your password to contain?"));
+      } 
+      alert(`Your password will have ${lengthOfPassword} characters`);
