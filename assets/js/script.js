@@ -26,3 +26,19 @@ function generatePassword() {
       var lengthOfPassword = (prompt("How many characters would you like your password to contain?"));
       } 
       alert(`Your password will have ${lengthOfPassword} characters`);
+
+    // sets the parameters of password 
+    var confirmSymbol = confirm(" By clicking 'Ok' you're confirming to include Symbol in the password");
+    var confirmNumeric = confirm("By clicking 'Ok' you're confirming to include Number in the passwords");    
+    var confirmLowerLetter = confirm("By clicking 'Ok' you're confirming to include LowerCase  in the password");
+    var confirmUpperLetter = confirm("By clicking 'Ok' you're confirming to include UpperCase in the password");
+      // If the entered value is outside of the parameters the loop start again
+      if(confirmUpperLetter === false && confirmLowerLetter === false && confirmSymbol === false && confirmNumeric === false) {
+        alert("You must choose at least one parameter");
+        var confirmSymbol = confirm(" By clicking 'Ok' you're confirming to include Symbol in the password");
+        var confirmNumeric = confirm("By clicking 'Ok' you're confirming to include Number in the passwords");    
+        var confirmLowerLetter = confirm("By clicking 'Ok' you're confirming to include LowerCase  in the password");
+        var confirmUpperLetter = confirm("By clicking 'Ok' you're confirming to include UpperCase in the password");
+
+
+    } 
