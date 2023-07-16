@@ -52,3 +52,26 @@ function generatePassword() {
 
 
     }
+
+      //  adds the parameters to the password characters array 
+      var passwordCharacters = []
+      
+    if (confirmSymbol) {
+      passwordCharacters = passwordCharacters.concat(symbol)
+      
+  
+    }
+
+    if (confirmNumeric ) {
+      passwordCharacters = passwordCharacters.concat(number)
+     
+    }
+      
+    if (confirmLowerLetter) {
+      passwordCharacters = passwordCharacters.concat(lowerLetter)
+     
+    }
+    if (confirmUpperLetter ) {
+      passwordCharacters = passwordCharacters.concat(upperLetter)
+    
+    }
