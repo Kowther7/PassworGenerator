@@ -19,14 +19,7 @@ var confirmNumber;
 
 
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.textContent = password;
-
-
-}
 // Prompt to confirm how many characters the user would like in their password
 function generatePassword() {
   var lengthOfPassword = prompt("How many characters would you like your password to contain?");
@@ -75,3 +68,26 @@ function generatePassword() {
       passwordCharacters = passwordCharacters.concat(upperLetter)
     
     }
+    console.log(passwordCharacters)
+
+     
+      // The for-loop will fill with the array with randomly selected characters from the array 
+      var randomPasswordGenerator = ""
+      
+      
+      
+      for (var index  = 0; index < lengthOfPassword; index++) {
+        randomPasswordGenerator = randomPasswordGenerator + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+        console.log(randomPasswordGenerator)
+      }
+      return randomPasswordGenerator;
+
+}
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.textContent = password;
+
+
+}
